@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:HelloStatic"
+             xmlns:sys="clr-namespace:System;assembly=mscorlib" 
+             x:Class="HelloStatic.MainPage">
+
+    <StackLayout
+               Padding="{x:Static local:AppConstants.PagePadding}">
+        <!-- Place new controls here -->
+    	<Label Text="Welcome to Xamarin.Forms!" 
+               TextColor="{x:Static local:AppConstants.ForegroundColor}" 
+               BackgroundColor="{x:Static local:AppConstants.BackgroundColor}"
+               Font="{x:Static local:AppConstants.TitleFont}"
+               HorizontalOptions="Center"
+               VerticalOptions="CenterAndExpand" />
+        <BoxView WidthRequest="{x:Static sys:Math.PI}" 
+
+               HeightRequest="{x:Static sys:Math.E}" 
+
+               Color="{x:Static local:AppConstants.ForegroundColor}" 
+
+               HorizontalOptions="Center" 
+
+               VerticalOptions="CenterAndExpand" 
+
+               Scale="100" />
+    </StackLayout>
+
+</ContentPage>

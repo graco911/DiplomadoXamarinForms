@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:HelloSharedResources"
+             x:Class="HelloSharedResources.MainPage">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <LayoutOptions x:Key="HorzOptions"
+                           Alignment="Center"/>
+            <LayoutOptions x:Key="VertOptions"
+                          Alignment="Center"
+                          Expands="true"/>
+        </ResourceDictionary>
+        <x:Double x:Key="BorderWidth">
+            3
+        </x:Double>
+        <x:Double x:Key="Rotation">-15</x:Double>
+        <!--<Color x:Key="TextColor">Red</Color>-->
+        <x:Double x:Key="FontSize">24</x:Double>
+        <OnPlatform x:Key="TextColor"
+                    x:TypeArguments="Color">
+            <On Platform="iOS" Value="Red"/>
+            <On Platform="Android" Value="Green"/>
+            <On Platform="UWP" Value="#80ff80"/>
+            
+        </OnPlatform>
+    </ContentPage.Resources>
+
+    <StackLayout>
+        <StackLayout.Resources>
+            <ResourceDictionary>
+                <Color x:Key="TextColor">Blue</Color>
+            </ResourceDictionary>
+        </StackLayout.Resources>
+        <Button Text="Toca aqui!"
+                HorizontalOptions="{StaticResource HorzOptions}"
+                VerticalOptions="{StaticResource VertOptions}"
+                BorderWidth="{StaticResource BorderWidth}"
+                Rotation="{StaticResource Rotation}"
+                TextColor="{StaticResource TextColor}"
+                FontSize="{StaticResource FontSize}"/>
+        <Button Text="Soy el 2o botón"
+                HorizontalOptions="{StaticResource HorzOptions}"
+                VerticalOptions="{StaticResource VertOptions}"
+                BorderWidth="{StaticResource BorderWidth}"
+                Rotation="{StaticResource Rotation}"
+                TextColor="{StaticResource TextColor}"
+                FontSize="{StaticResource FontSize}"/>
+        <Button Text="Soy el 3er botón"
+                HorizontalOptions="{StaticResource HorzOptions}"
+                VerticalOptions="{StaticResource VertOptions}"
+                BorderWidth="{StaticResource BorderWidth}"
+                Rotation="{StaticResource Rotation}"
+                TextColor="{StaticResource TextColor}"
+                FontSize="{StaticResource FontSize}"/>
+    </StackLayout>
+
+</ContentPage>

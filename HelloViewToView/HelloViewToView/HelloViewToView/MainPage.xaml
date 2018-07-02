@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:HelloViewToView"
+             x:Class="HelloViewToView.MainPage">
+
+    <StackLayout>
+        <Label Text="Girado"
+               BindingContext="{x:Reference SliderView}"
+               Rotation="{Binding Value}"
+               FontAttributes="Bold"
+               FontSize="Large"
+               HorizontalOptions="Center"
+               VerticalOptions="CenterAndExpand"/>
+        <Slider x:Name="SliderView" 
+                Maximum="360"
+                VerticalOptions="CenterAndExpand"/>
+
+        <Label FontSize="Large"
+               FontAttributes="Bold"
+               HorizontalOptions="Center"
+               BindingContext="{x:Reference Name=SliderView}"
+               Text="{Binding Path=Value, StringFormat='El ángulo es {0:F0} grados'}"
+               VerticalOptions="CenterAndExpand"/>
+    </StackLayout>
+</ContentPage>
