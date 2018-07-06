@@ -9,9 +9,9 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: global::Android.Runtime.ResourceDesignerAttribute("HelloBindingMode.Droid.Resource", IsApplication=true)]
+[assembly: global::Android.Runtime.ResourceDesignerAttribute("HelloCustomMarkup.Droid.Resource", IsApplication=true)]
 
-namespace HelloBindingMode.Droid
+namespace HelloCustomMarkup.Droid
 {
 	
 	
@@ -26,7 +26,7 @@ namespace HelloBindingMode.Droid
 		
 		public static void UpdateIdValues()
 		{
-			global::Xamarin.Forms.Platform.Android.Resource.Attribute.actionBarSize = global::HelloBindingMode.Droid.Resource.Attribute.actionBarSize;
+			global::Xamarin.Forms.Platform.Android.Resource.Attribute.actionBarSize = global::HelloCustomMarkup.Droid.Resource.Attribute.actionBarSize;
 		}
 		
 		public partial class Animation

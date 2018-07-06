@@ -15,6 +15,9 @@
         <Slider x:Name="SliderView" 
                 Maximum="360"
                 VerticalOptions="CenterAndExpand"/>
+        <Slider x:Name="SliderViewColor" 
+                Maximum="360"
+                VerticalOptions="CenterAndExpand"/>
 
         <Label FontSize="Large"
                FontAttributes="Bold"

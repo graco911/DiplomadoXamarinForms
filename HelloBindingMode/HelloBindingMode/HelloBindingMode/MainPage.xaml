@@ -19,5 +19,41 @@
                Text="Hello Binding Mode"
                HorizontalOptions="Center" 
                VerticalOptions="CenterAndExpand" />
+        <Slider x:Name="ScaleSlider" 
+                BindingContext="{x:Reference MessageLabel}" 
+                Grid.Row="1" Grid.Column="0" 
+                Maximum="5" 
+                Value="{Binding Scale, Mode=TwoWay}" />
+        <Label BindingContext="{x:Reference ScaleSlider}" 
+               Text="{Binding Value, StringFormat='Scale = {0:F1}'}" 
+               Grid.Row="1" Grid.Column="1" 
+               VerticalTextAlignment="Center" />
+        <Slider x:Name="RotationSlider" 
+                BindingContext="{x:Reference MessageLabel}" 
+                Grid.Row="2" Grid.Column="0" 
+                Maximum="360" 
+                Value="{Binding Rotation, Mode=OneWayToSource}" />
+        <Label BindingContext="{x:Reference RotationSlider}" 
+               Text="{Binding Value, StringFormat='Rotation = {0:F0}'}" 
+               Grid.Row="2" Grid.Column="1" 
+               VerticalTextAlignment="Center" />
+        <Slider x:Name="RotationXSlider" 
+                BindingContext="{x:Reference MessageLabel}" 
+                Grid.Row="3" Grid.Column="0" 
+                Maximum="360" 
+                Value="{Binding RotationX, Mode=OneWayToSource}" />
+        <Label BindingContext="{x:Reference RotationXSlider}" 
+               Text="{Binding Value, StringFormat='RotationX = {0:F0}'}" 
+               Grid.Row="3" Grid.Column="1" 
+               VerticalTextAlignment="Center" />
+        <Slider x:Name="RotationYSlider" 
+                BindingContext="{x:Reference MessageLabel}"
+                Grid.Row="4" Grid.Column="0" 
+                Maximum="360" 
+                Value="{Binding RotationY, Mode=OneWayToSource}" />
+        <Label BindingContext="{x:Reference RotationYSlider}" 
+               Text="{Binding Value, StringFormat='RotationY = {0:F0}'}" 
+               Grid.Row="4" Grid.Column="1" 
+               VerticalTextAlignment="Center" />
     </Grid>
 </ContentPage>
