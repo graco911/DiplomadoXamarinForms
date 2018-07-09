@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:HelloLayoutOptions"
+             x:Class="HelloLayoutOptions.MainPage">
+
+    <!--<StackLayout>
+        <Label Text="Start" BackgroundColor="DarkOrange"
+               HorizontalOptions="Start"/>
+        <Label Text="Center" BackgroundColor="DarkOrange"
+               HorizontalOptions="Center"/>
+        <Label Text="End" BackgroundColor="DarkOrange"
+               HorizontalOptions="End"/>
+        <Label Text="Fill" BackgroundColor="DarkOrange"
+               HorizontalOptions="Fill"/>
+    </StackLayout>-->
+
+    <StackLayout>        
+        <BoxView 
+            BackgroundColor="Red" 
+            HeightRequest="1" />
+        <Label 
+            Text="Start" 
+            BackgroundColor="DarkOrange"
+            VerticalOptions="StartAndExpand" />
+        <BoxView 
+            BackgroundColor="Red" 
+            HeightRequest="1" />
+        <Label 
+            Text="Center"
+            BackgroundColor="DarkOrange"  
+            VerticalOptions="CenterAndExpand" />
+        <BoxView 
+            BackgroundColor="Red" 
+            HeightRequest="1" />
+        <Label
+            Text="End"
+            BackgroundColor="DarkOrange"  
+            VerticalOptions="EndAndExpand" />
+        <BoxView 
+            BackgroundColor="Red" 
+            HeightRequest="1" />
+        <Label 
+            Text="Fill" 
+            BackgroundColor="DarkOrange"
+            VerticalOptions="FillAndExpand" />
+        <BoxView
+            BackgroundColor="Red"
+            HeightRequest="1" />
+    </StackLayout>
+
+</ContentPage>
